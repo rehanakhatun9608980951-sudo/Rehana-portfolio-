@@ -1,119 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <!-- Google Search Console Verification - DO NOT DELETE -->
   <meta name="google-site-verification"
   content="mrRVm7lpUl1_MO8WNIM7_lU9nm8-O0JlDuHgAWKKaQ4" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+  content="Rehana - Web Designer and Canva Designer. I create modern websites and creative Canva designs.">
+
+  <meta name="robots" content="index, follow">
+
+  <title>Rehana | Web & Canva Designer</title>
+
   <style>
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      scroll-behavior: smooth;
       font-family: Arial, sans-serif;
     }
 
     body {
-      background: #f7f7fb;
-      color: #222;
+      background: #0b0b16;
+      color: white;
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, #6d28d9, #9333ea);
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
+    /* NAVBAR */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 11, 22, 0.95);
+      padding: 15px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #29294a;
     }
 
-    header h1 {
-      font-size: 42px;
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #b88cff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #b88cff;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at top, #35205f, #0b0b16 60%);
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .small-title {
+      color: #b88cff;
+      font-size: 18px;
       margin-bottom: 10px;
     }
 
-    header p {
-      font-size: 19px;
-      margin-bottom: 25px;
+    .hero h1 {
+      font-size: clamp(42px, 10vw, 75px);
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      color: #d2b8ff;
+      font-size: clamp(22px, 5vw, 35px);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #c4c4d5;
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
-      background: white;
-      color: #6d28d9;
-      padding: 12px 25px;
-      border-radius: 25px;
+      padding: 13px 25px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
 
+    .primary {
+      background: #9b5cff;
+      color: white;
+    }
+
+    .secondary {
+      border: 1px solid #9b5cff;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* GENERAL */
+
     section {
-      padding: 60px 8%;
+      padding: 80px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      color: #b88cff;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #aaaabe;
+    }
+
+    /* ABOUT */
+
+    .about-box {
+      max-width: 850px;
+      margin: auto;
+      background: #151528;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid #29294a;
       text-align: center;
     }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
-      color: #6d28d9;
+    .about-box p {
+      color: #c6c6d2;
+      font-size: 17px;
     }
 
-    .about p {
-      max-width: 700px;
-      margin: auto;
-      color: #555;
-    }
+    /* SKILLS */
 
     .skills {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .skill {
-      background: white;
-      padding: 15px 25px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      font-weight: bold;
+      background: #151528;
+      border: 1px solid #29294a;
+      padding: 25px 15px;
+      border-radius: 18px;
+      text-align: center;
+      transition: 0.3s;
     }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      border-color: #9b5cff;
+    }
+
+    .skill h3 {
+      color: #d7c1ff;
+    }
+
+    /* SERVICES */
 
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      gap: 22px;
     }
 
     .service {
-      background: white;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      background: #151528;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #29294a;
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+      border-color: #9b5cff;
+    }
+
+    .service-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
     }
 
     .service h3 {
-      color: #6d28d9;
-      margin-bottom: 8px;
+      color: #d7c1ff;
+      margin-bottom: 10px;
     }
+
+    .service p {
+      color: #aaaabe;
+    }
+
+    /* PROJECTS */
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      max-width: 1100px;
-      margin: 30px auto 0;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
     }
 
     .design {
-      background: white;
+      background: #151528;
       padding: 10px;
-      border-radius: 16px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.10);
-      transition: transform 0.2s;
+      border-radius: 18px;
+      border: 1px solid #29294a;
+      overflow: hidden;
+      transition: 0.3s;
     }
 
     .design:hover {
-      transform: translateY(-5px);
+      transform: translateY(-7px);
+      border-color: #9b5cff;
     }
 
     .design img {
@@ -122,132 +263,415 @@
       border-radius: 12px;
     }
 
-    .contact {
-      background: #eee9ff;
+    .design h3 {
+      text-align: center;
+      padding: 15px 5px;
+      color: #d7c1ff;
     }
 
-    .contact p {
-      margin: 10px 0;
+    /* CONTACT */
+
+    .contact {
+      background: linear-gradient(135deg, #24153f, #111122);
+      text-align: center;
     }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-box h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+      color: #d7c1ff;
+    }
+
+    .contact-box p {
+      color: #c2c2d0;
+      margin-bottom: 25px;
+    }
+
+    /* FOOTER */
 
     footer {
-      background: #222;
-      color: white;
       text-align: center;
       padding: 25px;
+      background: #07070f;
+      color: #858599;
+      font-size: 14px;
     }
+
+    /* MOBILE */
+
+    @media (max-width: 650px) {
+
+      nav {
+        padding: 14px 5%;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+
+      .hero {
+        min-height: 85vh;
+      }
+
+      .about-box {
+        padding: 25px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .contact-box h2 {
+        font-size: 30px;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
 
-  <header>
-    <h1>Rehana's Portfolio</h1>
-    <p>Web Designer & Canva Designer</p>
-    <a href="#projects" class="btn">View My Designs</a>
-  </header>
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">Rehana.</div>
+
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Work</a>
+    </div>
+
+  </nav>
 
 
-  <section class="about">
-    <h2>About Me</h2>
+  <!-- HERO -->
 
-    <p>
-      Hello! I am Rehana. I am learning web design, HTML, CSS and Canva.
-      I create simple and beautiful websites and creative designs.
-    </p>
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="small-title">
+        Hello, I'm
+      </div>
+
+      <h1>Rehana</h1>
+
+      <h2>Web & Canva Designer</h2>
+
+      <p>
+        I create modern websites and creative Canva designs
+        for personal brands and small businesses.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#projects" class="btn primary">
+          View My Work
+        </a>
+
+        <a href="#contact" class="btn secondary">
+          Contact Me
+        </a>
+
+      </div>
+
+    </div>
+
   </section>
 
 
-  <section>
-    <h2>My Skills</h2>
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-title">
+
+      <h2>About Me</h2>
+
+      <p>Get to know me</p>
+
+    </div>
+
+    <div class="about-box">
+
+      <p>
+        Hello! I am Rehana. I am learning web design,
+        HTML, CSS and Canva. I create simple, modern
+        and beautiful websites and creative designs.
+        I enjoy learning new skills and creating
+        useful digital designs.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="section-title">
+
+      <h2>My Skills</h2>
+
+      <p>Things I am learning and working with</p>
+
+    </div>
 
     <div class="skills">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">Canva</div>
-      <div class="skill">Web Design</div>
-      <div class="skill">Graphic Design</div>
+
+      <div class="skill">
+        <h3>HTML</h3>
+      </div>
+
+      <div class="skill">
+        <h3>CSS</h3>
+      </div>
+
+      <div class="skill">
+        <h3>Canva</h3>
+      </div>
+
+      <div class="skill">
+        <h3>Web Design</h3>
+      </div>
+
+      <div class="skill">
+        <h3>Graphic Design</h3>
+      </div>
+
+      <div class="skill">
+        <h3>Responsive Design</h3>
+      </div>
+
     </div>
+
   </section>
 
 
-  <section>
-    <h2>My Services</h2>
+  <!-- SERVICES -->
+
+  <section id="services">
+
+    <div class="section-title">
+
+      <h2>My Services</h2>
+
+      <p>What I can create</p>
+
+    </div>
 
     <div class="services">
 
       <div class="service">
+
+        <div class="service-icon">💻</div>
+
         <h3>Website Design</h3>
-        <p>Simple and responsive websites for personal and small-business use.</p>
+
+        <p>
+          Simple and modern websites for personal
+          portfolios and small businesses.
+        </p>
+
       </div>
 
-      <div class="service">
-        <h3>Canva Design</h3>
-        <p>Creative posters and social media designs.</p>
-      </div>
 
       <div class="service">
+
+        <div class="service-icon">🎨</div>
+
+        <h3>Canva Designs</h3>
+
+        <p>
+          Creative posters, advertisements and
+          social media designs.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">📱</div>
+
         <h3>Social Media Posts</h3>
-        <p>Beautiful promotional designs for social media.</p>
+
+        <p>
+          Promotional graphics for Instagram,
+          WhatsApp and other social platforms.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">🏪</div>
+
+        <h3>Business Websites</h3>
+
+        <p>
+          Website designs for restaurants,
+          gyms and small businesses.
+        </p>
+
       </div>
 
     </div>
+
   </section>
 
 
+  <!-- PROJECTS -->
+
   <section id="projects">
-    <h2>My Canva Designs</h2>
 
-    <p>
-      Here are some of my creative Canva designs.
-    </p>
+    <div class="section-title">
 
-    <<div class="gallery">
+      <h2>My Work</h2>
 
-  <div class="design">
-    <img src="1.png" alt="Restaurant Poster">
-    <h3>Restaurant Poster</h3>
-  </div>
-
-  <div class="design">
-    <img src="99608980951%20(1).png" alt="Creative Poster">
-    <h3>Creative Poster</h3>
-  </div>
-
-  <div class="design">
-    <img src="Black%20Modern%20GYM%20Membership%20Poster%20(1).png" alt="Gym Poster">
-    <h3>Gym Poster</h3>
-  </div>
-
-  <div class="design">
-    <img src="file_0000000018348211af19d101a4373c0c.png" alt="Business Poster">
-    <h3>Business Poster</h3>
-  </div>
-
-  <div class="design">
-    <img src="file_0000000019288210b42d89cb8a758094.png" alt="Guest House Poster">
-    <h3>Guest House Poster</h3>
-  </div>
-
-  <div class="design">
-    <img src="file_00000000c46c82108777f99a5687afa3.png" alt="Canva Design">
-    <h3>Canva Design</h3>
-  </div>
-
-  <div class="design">
-    <img src="file_00000000fbc481fa942315fc0bedd811.png" alt="Creative Design">
-    <h3>Creative Design</h3>
-  </div>
-
-  <div class="design">
-    <img src="1.png" alt="Restaurant Design">
-    <h3>Restaurant Design</h3>
-  </div>
+      <p>Some of my Canva designs</p>
 
     </div>
+
+
+    <div class="gallery">
+
+
+      <div class="design">
+
+        <img src="1.png" alt="Restaurant Poster">
+
+        <h3>Restaurant Poster</h3>
+
+      </div>
+
+
+      <div class="design">
+
+        <img src="99608980951%20(1).png"
+        alt="Creative Poster">
+
+        <h3>Creative Poster</h3>
+
+      </div>
+
+
+      <div class="design">
+
+        <img src="Black%20Modern%20GYM%20Membership%20Poster%20(1).png"
+        alt="Gym Poster">
+
+        <h3>Gym Poster</h3>
+
+      </div>
+
+
+      <div class="design">
+
+        <img src="file_0000000018348211af19d101a4373c0c.png"
+        alt="Business Poster">
+
+        <h3>Business Poster</h3>
+
+      </div>
+
+
+      <div class="design">
+
+        <img src="file_0000000019288210b42d89cb8a758094.png"
+        alt="Guest House Poster">
+
+        <h3>Guest House Poster</h3>
+
+      </div>
+
+
+      <div class="design">
+
+        <img src="file_00000000c46c82108777f99a5687afa3.png"
+        alt="Canva Design">
+
+        <h3>Canva Design</h3>
+
+      </div>
+
+
+      <div class="design">
+
+        <img src="file_00000000fbc481fa942315fc0bedd811.png"
+        alt="Creative Design">
+
+        <h3>Creative Design</h3>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="contact-box">
+
+      <h2>Let's Work Together</h2>
+
+      <p>
+        Have a design or website project?
+        You can contact me to discuss your idea.
+      </p>
+
+      <!-- Add a parent/guardian-approved contact method here -->
+
+      <a href="#home" class="btn primary">
+        Back to Home
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
   <footer>
-    <p>© 2026 Rehana's Portfolio | All Rights Reserved</p>
+
+    <p>
+      © 2026 Rehana's Portfolio
+    </p>
+
+    <p>
+      Web & Canva Designer
+    </p>
+
   </footer>
 
+
 </body>
-</html>
+  </html>
